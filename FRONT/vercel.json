@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "src",
+      "use": "@vercel/node",
+      "outDir": "dist",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/:path*",
+      "dest": "/.next/server/pages/:path*"
+    }
+  ]
+}

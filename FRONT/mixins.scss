@@ -1,0 +1,9 @@
+@mixin button($padding, $width, $radius, $bg, $border, $height: fit-content) {
+  padding: $padding;
+  width: $width;
+  height: $height;
+  border-radius: $radius;
+  background-color: $bg;
+  border: $border;
+  cursor: pointer;
+}

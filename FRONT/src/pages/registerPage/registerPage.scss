@@ -1,0 +1,174 @@
+@use '../../../mixins' as m;
+@import '../../../variables';
+
+main[id='main-container'].register-main {
+  background: linear-gradient(to bottom, whitesmoke 0%, blue);
+  justify-content: center;
+}
+
+[id='register-form'].register-container {
+  user-select: none;
+
+  width: 60%;
+  position: absolute;
+
+  bottom: 17%;
+
+  height: 75%;
+  padding: 30px;
+  background: linear-gradient(to right bottom, white 0%, transparent 50%),
+    linear-gradient(to left bottom, white 0%, transparent 50%);
+  // background-image: url('https://www.transparenttextures.com/patterns/cross-scratches.png');
+  box-shadow: inset 0px 0px 12px 3px black;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  border-radius: $-br-m;
+  animation: opacity 1s ease;
+
+  h2 {
+    font-size: 3rem;
+    position: relative;
+    bottom: 1rem;
+  }
+
+  > p {
+    margin-top: 2rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  > p:nth-of-type(1) {
+    position: relative;
+    bottom: 40px;
+  }
+
+  div:first-of-type {
+    input {
+      -webkit-text-fill-color: rgb(43, 43, 43);
+    }
+  }
+
+  div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+    label {
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+
+    input {
+      padding: $-padding-xs;
+      margin-left: 1rem;
+      font-weight: bold;
+      width: 40%;
+    }
+    input.success {
+      outline: 2px solid greenyellow;
+    }
+    input:user-invalid {
+      outline: 2px solid crimson;
+    }
+  }
+  [id='message-login'] {
+    position: relative;
+    text-align: center;
+    min-width: 40%;
+    bottom: -8px;
+    min-height: 40px;
+    color: black;
+    background-color: crimson;
+    font-weight: bolder;
+    padding: 5px $-padding-xs;
+    font-size: 1.2rem;
+    user-select: text;
+  }
+  p[id='message-login'].success {
+    background-color: greenyellow;
+  }
+
+  input:focus {
+    outline: 2px solid rgb(0, 0, 0);
+  }
+  [id='parraf-to-register'] {
+    display: none;
+  }
+  button {
+    @include m.button(
+      $-padding-xs $-padding-s,
+      50%,
+      $-br-m,
+      steelblue,
+      1px solid transparent
+    );
+    color: aliceblue;
+    font-size: 1rem;
+    transition: all 0.7s ease;
+    font-weight: bold;
+    margin-inline: auto;
+  }
+  button:focus {
+    background-color: rgb(8, 8, 79);
+  }
+  button:hover {
+    background-color: rgb(8, 8, 79);
+    border: 1px solid black;
+  }
+  button:active {
+    background-color: blue;
+  }
+  div[id='loader-container'].loader-register {
+    width: 30px;
+    bottom: 15%;
+  }
+}
+
+@media (width<1017px) {
+  [id='register-form'].register-container {
+    width: 75%;
+    bottom: 7%;
+    height: 75%;
+  }
+}
+@media (width<550px) {
+  [id='register-form'].register-container {
+    div {
+      [id='input-email'],
+      [id='password-input'] {
+        width: 80%;
+      }
+    }
+  }
+}
+@media (width<381px) {
+  [id='register-form'].register-container {
+    width: 95%;
+    div {
+      [id='input-email'],
+      [id='password-input'] {
+        width: 85%;
+      }
+    }
+    p[id='message-login'] {
+      font-size: 1rem;
+    }
+  }
+}
+@media (height<661px) {
+  main[id='main-container'].register-main {
+    height: 180svh;
+    [id='register-form'].register-container {
+      width: 60%;
+      height: 150%;
+      > p {
+        margin-top: 0px;
+      }
+    }
+    [id='register-form'].register-container div input {
+      width: 70%;
+    }
+  }
+}

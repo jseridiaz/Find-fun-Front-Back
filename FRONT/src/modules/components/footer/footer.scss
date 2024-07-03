@@ -1,0 +1,121 @@
+@import '../../../../variables';
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer[id='footer-container'] {
+  opacity: 0;
+  position: relative;
+  flex-wrap: wrap;
+  background-color: rgb(121, 121, 121);
+  padding: $-padding-xs $-padding-m;
+  background-image: url('https://www.transparenttextures.com/patterns/cross-scratches.png');
+  animation: opacity 0.5s ease forwards 0.1s;
+  min-height: 200px;
+  gap: $-gap-l;
+  justify-content: space-between;
+
+  article {
+    height: 100%;
+    padding-inline: $-padding-xs;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-around;
+    > h4 {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+    > p {
+      text-align: center;
+      font-weight: 600;
+      svg {
+        width: 25px;
+        height: 25px;
+      }
+    }
+    p:nth-of-type(1) {
+      gap: $-gap-xs;
+      a {
+        align-items: center;
+        gap: 1px;
+      }
+    }
+
+    ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: 100%;
+      width: 100%;
+      margin-inline: auto;
+      justify-content: space-around;
+      align-items: start;
+      column-gap: $-gap-s;
+      row-gap: $-gap-xs;
+      li:nth-child(1),
+      li:nth-child(4) {
+        background-color: rgb(184, 182, 182);
+      }
+
+      li:nth-child(2),
+      li:nth-child(3) {
+        background-color: rgb(131, 123, 251);
+      }
+      li:nth-child(1):hover,
+      li:nth-child(4):hover {
+        background-color: rgb(137, 136, 136);
+      }
+      li:nth-child(2):hover,
+      li:nth-child(3):hover {
+        background-color: rgb(79, 67, 250);
+      }
+      li {
+        cursor: pointer;
+        height: 80px;
+        width: 80px;
+        position: relative;
+        padding: $-padding-xs;
+        transition: all 1s ease-out;
+        border-radius: $-br-s;
+
+        a {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+          transition: all 1s ease-out;
+          img {
+            width: 40px;
+            height: 40px;
+          }
+          svg {
+            width: 40px;
+            height: 40px;
+          }
+        }
+        a:link {
+          color: black;
+        }
+      }
+    }
+  }
+}
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (width <= 1009px) {
+  footer[id='footer-container'] {
+    justify-content: space-evenly;
+    align-content: center;
+    article {
+      padding-top: $-padding-xs;
+    }
+  }
+}

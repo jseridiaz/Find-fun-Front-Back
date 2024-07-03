@@ -1,0 +1,206 @@
+@use '../../../mixins' as p;
+@import '../../../variables';
+
+main.sesion-main-page.profil-main.flex-container {
+  flex-wrap: wrap;
+  justify-content: stretch;
+  align-items: stretch;
+  padding: $-padding-s;
+  gap: $-gap-xs;
+  [id='advice-container'] {
+    display: flex;
+    flex-direction: column;
+    background-color: blue;
+    z-index: 20;
+    width: 60%;
+    justify-content: space-evenly;
+    align-items: center;
+    p {
+      font-size: 2rem;
+    }
+    p:nth-of-type(2) {
+      position: relative;
+      bottom: 50px;
+    }
+    button[id='close-form'] {
+      top: 75%;
+      right: 28%;
+      font-size: 2rem;
+    }
+  }
+}
+[id='section-create-profil'] {
+  width: 49%;
+}
+
+#article-profile-info {
+  background-color: aliceblue;
+  min-height: 100%;
+  min-width: 240px;
+  width: 100%;
+  gap: $-gap-s;
+  padding: $-padding-s;
+  align-items: start;
+
+  h2 {
+    padding: $-padding-xs;
+    text-align: center;
+    font-size: 2rem;
+    align-self: center;
+    height: 100px;
+  }
+  h4 {
+    width: 100%;
+    outline: 2px solid black;
+    border-radius: $-br-s;
+    padding: $-padding-xs;
+    max-width: 100%;
+    word-break: break-word;
+  }
+  h4::first-letter {
+    text-transform: uppercase;
+  }
+  h4:nth-of-type(even) {
+    background: linear-gradient(
+      to bottom right,
+      transparent,
+      rgb(110, 171, 233)
+    );
+  }
+
+  h4:nth-of-type(odd) {
+    background: linear-gradient(to top left, transparent, rgb(110, 171, 233));
+  }
+}
+textarea[id='about-me-profile'] {
+  border: none;
+  min-height: 200px;
+  width: 100%;
+  text-align: start;
+  padding: $-padding-xs;
+}
+[id='about-me-profile']::placeholder {
+  justify-self: start;
+}
+.crimson {
+  background-color: crimson;
+}
+[id='create-profil-page'] {
+  position: relative;
+  min-width: 240px;
+  width: 49%;
+  min-height: 534px;
+  background-color: aliceblue;
+  align-items: center;
+  gap: $-gap-s;
+  padding: $-padding-s;
+  h3 {
+    padding: $-padding-s;
+    text-align: center;
+    font-size: 1.8rem;
+  }
+
+  > div {
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    font-weight: 600;
+    justify-content: center;
+    input {
+      border: none;
+      width: 90%;
+      padding: $-padding-xs;
+      border-radius: $-br-s;
+    }
+
+    input:valid {
+      background-color: beige;
+    }
+
+    input:user-invalid {
+      outline: 2px solid crimson;
+    }
+  }
+  div:nth-of-type(3) {
+    align-items: start;
+  }
+  div:nth-of-type(1) {
+    input {
+      position: relative;
+      left: calc($-margin-xs + 2px);
+    }
+  }
+}
+[id='loader-container'].loader-profil {
+  top: 85%;
+  left: 45%;
+  width: 39px;
+}
+[id='send-profil'] {
+  @include p.button(
+    $-padding-xs,
+    50%,
+    $-br-s,
+    rgb(138, 235, 82),
+    7px solid transparent,
+    60px
+  );
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: all 0.5s ease;
+}
+[id='send-profil']:hover {
+  background-color: rgb(5, 188, 5);
+  border-color: rgb(21, 207, 0);
+  color: whitesmoke;
+}
+.parraf-no-profil {
+  background-color: rgb(0, 60, 255);
+  height: 80px;
+  border-radius: $-br-m;
+  align-content: center;
+  font-size: 1.2rem;
+  padding: $-padding-xs $-padding-s;
+  font-weight: bold;
+}
+.parraf-no-profil:first-child {
+  margin-top: 4rem;
+}
+@media (width<883px) {
+  textarea[id='about-me-profile'] {
+    min-width: 100%;
+    max-height: 400px;
+  }
+}
+@media (width<600px) {
+  main.sesion-main-page.flex-container {
+    [id='advice-container'] {
+      top: 58%;
+    }
+    [id='section-event-planned'] {
+      .events-options {
+        height: fit-content;
+      }
+    }
+    > img.portrait-session {
+      object-position: center;
+    }
+  }
+}
+@media (width<539px) {
+  [id='section-create-profil'],
+  [id='create-profil-page'] {
+    width: 100%;
+  }
+}
+@media (width<403) {
+  textarea[id='about-me-profile'] {
+    width: 100px;
+    max-height: 400px;
+  }
+}
+@media (height < 700px) {
+  header[id='header-main'].sesion-header nav.deploy {
+    top: 100%;
+  }
+}
