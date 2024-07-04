@@ -282,11 +282,15 @@ header.sesion-header {
   position: absolute;
 }
 
+main.sesion-main-page.no-register {
+  flex-wrap: wrap;
+}
 main.sesion-main-page.no-register [id=greating-user] {
   display: none;
 }
 
 main.flex-container.sesion-main-page {
+  flex-wrap: wrap;
   position: relative;
   max-width: 100%;
   min-height: 100svh;
