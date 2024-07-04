@@ -2162,6 +2162,7 @@ div[id=loader-container].loader-post {
     width: 100%;
     gap: 20px;
     height: 120svh;
+    max-height: fit-content;
   }
   [id=section-post-event] div {
     flex-wrap: wrap;
@@ -2182,13 +2183,31 @@ div[id=loader-container].loader-post {
     right: 55%;
     width: 40px;
   }
-  section[id=section-post-event] {
+  section[id=section-post-event].margin-xl {
     padding: 0px;
+    margin: 40px 0;
+    height: 200svh;
   }
-  section[id=section-post-event] [id=form-post-event] {
+  section[id=section-post-event].margin-xl [id=form-post-event] {
     gap: 10px;
-    height: fit-content;
     padding: 10px;
+  }
+}
+@media (height < 550px) {
+  [id=section-post-event] {
+    max-height: fit-content;
+    height: 170svh;
+  }
+}
+@media (height < 401px) and (width < 640px) {
+  [id=section-post-event] {
+    max-height: fit-content;
+    height: 330svh;
+  }
+}
+@media (width < 641px) and (height < 361px) {
+  [id=section-post-event] {
+    height: 200svh;
   }
 }
 * {

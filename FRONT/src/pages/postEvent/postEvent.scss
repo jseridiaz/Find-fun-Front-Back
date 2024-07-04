@@ -129,6 +129,7 @@ div[id='loader-container'].loader-post {
     width: 100%;
     gap: $-gap-s;
     height: 120svh;
+    max-height: fit-content;
     div {
       flex-wrap: wrap;
       gap: $-gap-xs;
@@ -149,12 +150,33 @@ div[id='loader-container'].loader-post {
     right: 55%;
     width: 40px;
   }
-  section[id='section-post-event'] {
+  section[id='section-post-event'].margin-xl {
     padding: 0px;
+    margin: $-margin-l 0;
+    height: 200svh;
+
     [id='form-post-event'] {
       gap: $-gap-xs;
-      height: fit-content;
+
       padding: $-padding-xs;
     }
+  }
+}
+@media (height < 550px) {
+  [id='section-post-event'] {
+    max-height: fit-content;
+    height: 170svh;
+  }
+}
+@media (height < 401px) and (width <640px) {
+  [id='section-post-event'] {
+    max-height: fit-content;
+    height: 330svh;
+  }
+}
+
+@media (width < 641px) and (height <361px) {
+  [id='section-post-event'] {
+    height: 200svh;
   }
 }

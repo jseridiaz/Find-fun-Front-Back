@@ -18,7 +18,7 @@ export const postEvent = () => {
 
   const section = sectionContainer(
     'section-post-event',
-    'flex-container',
+    'flex-container margin-xl',
     'section'
   )
 
