@@ -4,12 +4,14 @@ import { activeLoader } from '../../modules/animation/loader/loader'
 import { inputValue } from '../../modules/fetch/mainPage/inputValue'
 import { form } from '../../modules/form/form'
 import { newHeader } from '../../modules/newHeader/newHeader'
-import { routeMain } from '../../routes/routeMain'
 import { readMain } from '../../modules/functions/readMain'
 import {
   validateEmail,
   validatePassword
 } from '../../modules/functions/validatorForm'
+import { fetchLogin } from '../../modules/fetch/fetchLogin'
+import { setItemsLocal } from '../../modules/functions/setItemsLocal'
+import { sesionLoged } from '../sesion/sesionPage'
 export const registerPage = () => {
   const main = readMain()
   newHeader(liRegister, main, 'register-shape')
@@ -47,13 +49,24 @@ export const registerPage = () => {
     }
     const request = await inputValue(e, 'register')
     if (request) {
-      document.querySelector('#message-login').className = 'success'
+      const message = document.querySelector('#message-login')
+      const relogin = fetchLogin(email, password).then((res) => {
+        setItemsLocal(
+          res.result.token,
+          res.result.userFound.email,
+          res.result.userFound._id
+        )
+        return res
+      })
+
       const loader = activeLoader('loader-register')
       formular.appendChild(loader)
 
+      message.className = 'success'
+
       setTimeout(() => {
         loader.remove()
-        routeMain(main)
+        sesionLoged(main)
       }, 1500)
     }
   })

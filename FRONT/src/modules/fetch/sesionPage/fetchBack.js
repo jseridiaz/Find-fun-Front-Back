@@ -8,7 +8,7 @@ export const fetchBack = async (route, insertIn, token) => {
     .then((res) => res.json() /*.length>0?res.json():*/)
 
     .catch((err) => console.log(err))
-
+  console.log(array)
   printCards(array, insertIn, token)
 }
 export const fetchBackAttendes = async (route) => {

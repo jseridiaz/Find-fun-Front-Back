@@ -8,7 +8,7 @@ footer[id='footer-container'] {
   opacity: 0;
   position: relative;
   flex-wrap: wrap;
-  background-color: rgb(121, 121, 121);
+  background-color: $-bg-color-header;
   padding: $-padding-xs $-padding-m;
   background-image: url('https://www.transparenttextures.com/patterns/cross-scratches.png');
   animation: opacity 0.5s ease forwards 0.1s;
@@ -59,11 +59,11 @@ footer[id='footer-container'] {
 
       li:nth-child(2),
       li:nth-child(3) {
-        background-color: rgb(131, 123, 251);
+        background-color: $-bg-btn-blue;
       }
       li:nth-child(1):hover,
       li:nth-child(4):hover {
-        background-color: rgb(137, 136, 136);
+        background-color: $-bg-color-header;
       }
       li:nth-child(2):hover,
       li:nth-child(3):hover {

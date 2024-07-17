@@ -1,5 +1,6 @@
 import { hideErrMsn } from '../../animation/hideErrMsn/hideErrMsn'
 import { readMain } from '../../functions/readMain'
+import { setItemsLocal } from '../../functions/setItemsLocal'
 
 export const inputValue = async (e, endpoint) => {
   e.preventDefault()
@@ -23,18 +24,18 @@ export const inputValue = async (e, endpoint) => {
     .then((res) => {
       return res.json()
     })
-    .then((res) => {
+    .then(async (res) => {
       try {
         if (res.result && main.classList.contains('main-page')) {
           message.textContent = res.message
           message.classList.add('success')
           message.classList.remove('no-visibility')
-          localStorage.setItem('token', res.result.token)
-          localStorage.setItem('user', res.result.userFound.email)
-          localStorage.setItem('id', res.result.userFound._id)
+          setItemsLocal(
+            res.result.token,
+            res.result.userFound.email,
+            res.result.userFound._id
+          )
           hideErrMsn(message, 2000)
-        } else if (res.result && main.classList.contains('main-page')) {
-          message.classList.add('success')
         } else {
           if (message.classList.contains('success')) {
             message.classList.remove('success')

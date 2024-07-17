@@ -53,9 +53,9 @@
   font-weight: 700;
   cursor: pointer;
   border-radius: 8px;
-  transition: all 1s ease;
-  background-color: rgb(0, 86, 246);
-  border: 2px solid transparent;
+  transition: all 0.4s ease;
+  background-color: #8bb3ff;
+  border: 4px solid transparent;
 }
 [id=header-main] nav ul li a.links {
   display: inline-block;
@@ -70,7 +70,7 @@
   color: black;
 }
 [id=header-main] nav ul li:hover {
-  border: 2px solid burlywood;
+  border: 4px solid burlywood;
 }
 
 [id=header-main].sesion-header.no-register li[id=Log-out] {
@@ -159,7 +159,7 @@ footer[id=footer-container] {
   opacity: 0;
   position: relative;
   flex-wrap: wrap;
-  background-color: rgb(121, 121, 121);
+  background-color: #797979;
   padding: 10px 30px;
   background-image: url("https://www.transparenttextures.com/patterns/cross-scratches.png");
   animation: opacity 0.5s ease forwards 0.1s;
@@ -210,11 +210,11 @@ footer[id=footer-container] article ul li:nth-child(4) {
 }
 footer[id=footer-container] article ul li:nth-child(2),
 footer[id=footer-container] article ul li:nth-child(3) {
-  background-color: rgb(131, 123, 251);
+  background-color: #8bb3ff;
 }
 footer[id=footer-container] article ul li:nth-child(1):hover,
 footer[id=footer-container] article ul li:nth-child(4):hover {
-  background-color: rgb(137, 136, 136);
+  background-color: #797979;
 }
 footer[id=footer-container] article ul li:nth-child(2):hover,
 footer[id=footer-container] article ul li:nth-child(3):hover {
@@ -274,8 +274,8 @@ footer[id=footer-container] article ul li a:link {
 /* SPACINGS */
 header.sesion-header {
   position: relative;
-  background-color: #52fe75;
-  background-image: url("https://www.transparenttextures.com/patterns/assault.png");
+  background-color: #797979;
+  background-image: url("https://www.transparenttextures.com/patterns/cross-scratches.png");
 }
 
 .absolute {
@@ -294,9 +294,8 @@ main.flex-container.sesion-main-page {
   position: relative;
   max-width: 100%;
   min-height: 100svh;
-  background-color: rgb(1, 1, 3);
+  background-color: #8bb3ff;
   justify-content: space-between;
-  background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
   align-items: start;
   height: fit-content;
   width: 100%;
@@ -331,13 +330,15 @@ main.flex-container.sesion-main-page > [id=background-two] {
   object-fit: cover;
 }
 main.flex-container.sesion-main-page [id=filter-name] {
+  border: 15px solid rgb(255, 255, 255);
+  border-radius: 1rem;
   gap: 20px;
   margin-top: 540px;
   left: 31%;
   padding: 20px 10px;
   width: 60%;
   justify-content: center;
-  background-color: rgb(130, 230, 130);
+  background-color: transparent;
 }
 main.flex-container.sesion-main-page [id=filter-name] > h3 {
   font-size: 1.4rem;
@@ -353,16 +354,15 @@ main.flex-container.sesion-main-page [id=filter-name] > [id=btn-filter-name] {
   width: 12%;
   height: fit-content;
   border-radius: 5px;
-  background-color: steelblue;
+  background-color: #8bb3ff;
   border: 2px solid transparent;
   cursor: pointer;
   font-weight: 700;
   transition: all 0.6s ease;
 }
 main.flex-container.sesion-main-page [id=filter-name] > [id=btn-filter-name]:hover {
-  border-color: greenyellow;
+  border-color: black;
   filter: brightness(105%) contrast(110%);
-  box-shadow: 0px 0px 2px 0.7px #4489c3;
 }
 main.flex-container.sesion-main-page [id=filter-name] [id=remove-search-input] {
   position: absolute;
@@ -404,7 +404,7 @@ main.flex-container.sesion-main-page [id=title-sesion] {
   height: 300px;
   color: #ffe6e6;
   text-align: center;
-  text-shadow: 0px 0px 3px black, 0px 0px 5px black, 0px 0px 6px black, 0px 0px 8px rgb(226, 10, 10);
+  text-shadow: 0px 0px 3px black, 0px 0px 5px black, 0px 0px 6px black, 0px 0px 9px black;
   margin-inline: auto;
   font-size: 2rem;
   width: 45%;
@@ -429,9 +429,10 @@ main.flex-container.sesion-main-page [id=title-sesion]::after {
 main.flex-container.sesion-main-page [id=filter-event] {
   position: relative;
   margin-inline: auto;
-  background-color: antiquewhite;
+  background-color: transparent;
   right: 0px;
   width: 20%;
+  border: 15px solid rgb(243, 243, 243);
   margin-top: 540px;
   height: 100%;
   gap: 10px;
@@ -472,8 +473,8 @@ main.flex-container.sesion-main-page [id=filter-event] button:nth-of-type(1) {
   width: 40%;
   height: 50px;
   border-radius: 5px;
-  background-color: rgba(124, 69, 1, 0.6);
-  border: 1px solid rgb(54, 54, 54);
+  background-color: #8bb3ff;
+  border: 3px solid rgb(54, 54, 54);
   cursor: pointer;
   font-weight: bold;
 }
@@ -490,12 +491,10 @@ main.flex-container.sesion-main-page [id=filter-event] button:last-child {
   font-weight: bold;
 }
 main.flex-container.sesion-main-page section[id=all-events] {
-  background-color: rgb(1, 1, 3);
-  background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
   width: 75%;
   gap: 10px;
   padding: 20px 40px;
-  margin-top: 630px;
+  margin-top: 670px;
   flex-wrap: wrap;
   min-height: 90svh;
   justify-content: space-evenly;
@@ -796,8 +795,8 @@ main.flex-container.sesion-main-page section[id=all-events] article:hover {
   }
   main.flex-container.sesion-main-page [id=filter-event] {
     height: 490px;
-    width: 100%;
-    margin-top: 626px;
+    width: 90%;
+    margin-top: 660px;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: stretch;
@@ -827,7 +826,7 @@ main.flex-container.sesion-main-page section[id=all-events] article:hover {
   }
   main.flex-container.sesion-main-page [id=filter-event] > button[id=btn-send-filters],
   main.flex-container.sesion-main-page [id=filter-event] button[id=btn-reset-filter] {
-    width: 20%;
+    width: 30%;
     height: 60px;
     order: 7;
   }

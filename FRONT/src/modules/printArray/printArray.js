@@ -1,6 +1,7 @@
 import '../../../variables.scss'
 import { alertNoRegistered } from '../../data/alert/alertMsn'
-import { colourBtn } from '../../data/card/colourBtn'
+import { colourBtn } from '../../data/validatorExtension/card/colourBtn'
+
 import { routeEventDetail } from '../../routes/routeEventDetail'
 import { activeCarousel, clickBtn } from '../carousel/carousel'
 import { btn } from '../components/btn'
@@ -39,11 +40,19 @@ export const printCards = async (array, appendIn, token) => {
 
     const price = parraf('Price:', `${el.price}€ `, 'h4', 'price-event')
     const button = btn(`btn-event-${i}`, 'Visit it here')
+    if (
+      el.tematik.includes('Party') ||
+      el.tematik.includes('Humor') ||
+      el.tematik.includes('Fan')
+    ) {
+      button.classList.add('btn-white')
+    }
+
     button.addEventListener('click', (e) => {
       token ? routeEventDetail(el) : alertNoRegistered()
     })
 
-    button.style.backgroundColor = color
+    button.style.backgroundColor = '#889DCC'
     divInfo.style.backgroundColor = color
     article.style.backgroundColor = color
 

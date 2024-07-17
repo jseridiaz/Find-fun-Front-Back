@@ -29,8 +29,8 @@ export const mainPortrait = async (main) => {
   <div class="flex-container-column">
     <h1 id="first-h1"></h1>
     <p>
-      You'll <strong>find out <b>Concerts</b>, <b>sport plannings</b> and another <b>events that you like</b></strong>.
-    </p><p> And if you don't find nothing, then feel you have freedom to post it. </p>
+   <strong> Discover concerts, sporting events, and other activities you'll love</strong>!</p>  <p>If you can't find what you're looking for, feel free to post it yourself!</p>
+    
   </div>
 </section>`
   firstDiv.id = 'first-highlight'
