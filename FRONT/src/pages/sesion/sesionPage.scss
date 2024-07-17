@@ -60,7 +60,6 @@ main.flex-container.sesion-main-page {
     border-radius: 1rem;
     gap: $-gap-s;
     margin-top: calc(5 * $-margin-section + $-padding-l);
-
     left: 31%;
     padding: $-padding-s $-padding-xs;
     width: 60%;
@@ -81,8 +80,8 @@ main.flex-container.sesion-main-page {
         $-padding-xs $-padding-s,
         12%,
         $-br-s,
-        $-bg-btn-blue,
-        2px solid transparent,
+        $-bg-btn-blue-dark,
+        2px solid black,
         $height: fit-content
       );
       font-weight: 700;
@@ -208,7 +207,7 @@ main.flex-container.sesion-main-page {
         $-padding-xs,
         40%,
         $-br-s,
-        $-bg-btn-blue,
+        $-bg-btn-blue-dark,
         3px solid rgb(54, 54, 54),
         50px
       );

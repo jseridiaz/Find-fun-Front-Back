@@ -36,7 +36,7 @@ export const liEventsPlanned = (token) => [
     event: token ? routePostEvent : alertNoRegistered
   },
   {
-    component: liComponent('profile-info', 'Profil'),
+    component: liComponent('profile-info', 'Profile'),
     event: token ? routerProfil : alertNoRegistered
   },
   {

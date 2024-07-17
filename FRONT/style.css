@@ -354,8 +354,8 @@ main.flex-container.sesion-main-page [id=filter-name] > [id=btn-filter-name] {
   width: 12%;
   height: fit-content;
   border-radius: 5px;
-  background-color: #8bb3ff;
-  border: 2px solid transparent;
+  background-color: #889dcc;
+  border: 2px solid black;
   cursor: pointer;
   font-weight: 700;
   transition: all 0.6s ease;
@@ -473,7 +473,7 @@ main.flex-container.sesion-main-page [id=filter-event] button:nth-of-type(1) {
   width: 40%;
   height: 50px;
   border-radius: 5px;
-  background-color: #8bb3ff;
+  background-color: #889dcc;
   border: 3px solid rgb(54, 54, 54);
   cursor: pointer;
   font-weight: bold;
