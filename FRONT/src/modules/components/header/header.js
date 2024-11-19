@@ -20,7 +20,7 @@ export const createHeader = (liList, className = '') => {
 
   header.id = 'header-main'
   header.className = className
-  a.href = '#'
+  a.href = 'https://find-fun-front-back.vercel.app/home'
   img.src =
     'https://res.cloudinary.com/ddybbosdk/image/upload/v1718209364/Logo_jcxrih.png'
   img.loading = 'lazy'
