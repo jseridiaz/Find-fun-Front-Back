@@ -1,19 +1,9 @@
 {
   "version": 2,
-  "builds": [
+  "rewrites": [
     {
-      "src": "src",
-      "use": "@vercel/node",
-      "outDir": "dist",
-      "env": {
-        "NODE_ENV": "production"
-      }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/:path*",
-      "dest": "/.next/server/pages/:path*"
+      "source": "/(.*)",
+      "destination": "/"
     }
   ]
 }

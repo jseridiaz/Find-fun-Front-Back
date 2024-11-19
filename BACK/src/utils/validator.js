@@ -95,7 +95,7 @@ const validatorPassword = (pass, res) => {
 
   if (!regex.test(pass)) {
     return response400(
-      'The password must contain an uppercase word, a number, a special character "@$!%*.?&" and unless 8 characters',
+      'The password must contain an uppercase word, a number, a special character "@$!%*.?&" and unless 8 characters.....',
       res
     )
   }
