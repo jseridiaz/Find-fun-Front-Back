@@ -2,7 +2,7 @@
 @import '../../../variables';
 
 main[id='main-container'].register-main {
-  background: linear-gradient(to bottom, whitesmoke 0%, blue);
+  background: linear-gradient(to bottom, #c1d2ff 0%, #5707ff);
   justify-content: center;
 }
 
@@ -12,7 +12,7 @@ main[id='main-container'].register-main {
   width: 60%;
   position: absolute;
 
-  bottom: 17%;
+  bottom: 10%;
 
   height: 75%;
   padding: 30px;
@@ -161,8 +161,9 @@ main[id='main-container'].register-main {
   main[id='main-container'].register-main {
     height: 180svh;
     [id='register-form'].register-container {
-      width: 60%;
-      height: 150%;
+      bottom: -15%;
+      width: 90%;
+      height: 620px;
       > p {
         margin-top: 0px;
       }

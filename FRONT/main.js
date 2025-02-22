@@ -22,26 +22,26 @@ footer()
 
 // *Get the background image to the Sesion page
 
-window.addEventListener('popstate', (e) => {
-  switch (window.location.pathname) {
-    case '/home':
-      sesionLoged()
-      break
-    case '/register':
-      registerPage()
-      break
-    case '/community':
-      communityPage()
-      break
-    case '/myProfil':
-      profilPage()
-      break
-    case '/postEvent':
-      postEvent()
-    case '/':
-      mainPortrait(main)
-    default:
-      mainPortrait(main)
-      break
-  }
-})
+// window.addEventListener('popstate', (e) => {
+//   switch (window.location.pathname) {
+//     case '/home':
+//       sesionLoged()
+//       break
+//     case '/register':
+//       registerPage()
+//       break
+//     case '/community':
+//       communityPage()
+//       break
+//     case '/myProfil':
+//       profilPage()
+//       break
+//     case '/postEvent':
+//       postEvent()
+//     case '/':
+//       mainPortrait(main)
+//     default:
+//       mainPortrait(main)
+//       break
+//   }
+// })

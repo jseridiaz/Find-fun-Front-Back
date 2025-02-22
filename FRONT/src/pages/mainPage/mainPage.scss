@@ -296,17 +296,22 @@ main[id='main-container'].unique-page {
     top: 100%;
   }
 }
+@media (width<380px) and (height <700px) {
+  form[id='initial-login'] {
+    top: 110%;
+  }
+}
 @media (width<731px) and (640px < height <700px) {
   form[id='initial-login'] {
     top: 100%;
   }
 }
-@media (height <640px) {
+@media (height <640px) and (width>1064px) {
   form[id='initial-login'] {
-    top: 110%;
+    top: 25%;
   }
   main[id='main-container'].unique-page.main-page {
-    min-height: 206svh;
+    min-height: 100svh;
     max-height: fit-content;
   }
 }
